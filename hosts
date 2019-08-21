@@ -1,0 +1,1 @@
+oradb ansible_ssh_host=x.x.x.x ansible_ssh_port=22
