@@ -5,6 +5,10 @@
 ################################################################################
 
 # ==> Configure Linux
+
+- name: Install firewalld
+  yum: name=firewalld state=present
+  
 - name: Install required libraries
   yum: name={{ item }} state=present
   with_items: "{{ packages_list }}"
