@@ -1,7 +1,7 @@
 ################################################################################
 # ==> Tasks for oracle-install role. This role installs the Oracle Database
 # ==> 12c software, configure a database, listener and ex express
-# ==> author: Christos Vezalis
+
 ################################################################################
 
 - name: Create folder for installation files
@@ -69,13 +69,7 @@
   command: 'chkconfig --add oradb'
   become_user: root
 
-# You can remove it for non vagrant server.
-#- name: reboot vagrant virtual machine
-#  local_action: shell vagrant reload
-#  sudo_user: '{{ host_username }}'
-#  ignore_errors: yes
-#  tags:
-#    - reboot-vagrant
+
 
 - name: Create trigger for autostart pluggable db's
   copy: src=start-pluggable-dbs.sh dest={{ installation_folder }}/ mode=755
