@@ -4,7 +4,7 @@ Ansible playbook to configure a CentOS/RHEL/Oracle Linux 7 server with Oracle 12
 Requirement : 
 
 - Ansible
-- Centos 7 as a deployment server  
+- Centos 7 as a deployment server  ( 8gb minimum and 50gb storage)
 
 
 Download from Oracle support the Oracle installation files: 
@@ -21,9 +21,14 @@ ansible-playbook -i hosts oracle-db.yml -e ansible_python_interpreter=auto -v
 
 ```
 
-After a few minutes a virtual centos machine  with Oracle Database will be ready for you without any further configuration. You can access the Enterprise Manager Express using sys/sysdba and “oracle” as password.
+After a few minutes a virtual centos machine  with Oracle Database will be ready for you without any further configuration. You can access the Enterprise Manager 
 
-https://oradb3.private:5500/em
+https://x.x.x.x:5500/em
+
+```
+username: sys
+password: oracle
+```
 
 
 password for Oracle Operating system user is welcome1
